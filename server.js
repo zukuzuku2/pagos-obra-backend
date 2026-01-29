@@ -7,16 +7,16 @@ const requestLogger = require('./middlewares/requestLogger');
 const logger = require('./config/logger');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3003;
 
 // Middlewares
 app.use(cors({
   origin: [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    /^http:\/\/192\.168\.[0-9]{1,3}\.[0-9]{1,3}:3000$/,
-    /^http:\/\/10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}:3000$/,
-    /^http:\/\/172\.(1[6-9]|2[0-9]|3[0-1])\.[0-9]{1,3}\.[0-9]{1,3}:3000$/
+    'http://localhost:3002',
+    'http://127.0.0.1:3002',
+    /^http:\/\/192\.168\.[0-9]{1,3}\.[0-9]{1,3}:3002$/,
+    /^http:\/\/10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}:3002$/,
+    /^http:\/\/172\.(1[6-9]|2[0-9]|3[0-1])\.[0-9]{1,3}\.[0-9]{1,3}:3002$/
   ],
   credentials: true
 }));
