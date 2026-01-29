@@ -30,7 +30,7 @@ app.use('/api', routes);
 // Middleware de manejo de errores
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  logger.info(`Servidor iniciado en http://localhost:${PORT}`);
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  logger.info(`Servidor iniciado en http://0.0.0.0:${PORT}`);
+  console.log(`Servidor corriendo en http://0.0.0.0:${PORT}`);
 });
