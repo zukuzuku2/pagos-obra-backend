@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Trabajo {
+  id          Int      @id @default(autoincrement())
+  nombre      String
+  descripcion String?
+  tipoMedida  String   // "metros_cuadrados", "metros_lineales", "unidad"
+  precioUnitario Float
+  cantidad    Float    @default(0)
+  total       Float    @default(0)
+  pagado      Boolean  @default(false)
+  fechaCreacion DateTime @default(now())
+  fechaPago   DateTime?
+
+  @@map("trabajos")
+}
